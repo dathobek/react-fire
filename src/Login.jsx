@@ -8,6 +8,7 @@ export default class Login extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.login = this.login.bind(this);
+        this.signup = this.signup.bind(this);
         this.state = {
            email:'',
            password:''
@@ -19,6 +20,14 @@ export default class Login extends Component {
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
         }).catch((error)=>{
+            console.log(error);
+        });
+    }
+
+    signup(e){
+        e.preventDefault();
+        fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
+        .catch((error)=>{
             console.log(error);
         });
     }
