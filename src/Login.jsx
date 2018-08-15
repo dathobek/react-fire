@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Form,Col,FormGroup,FormControl,Button,Checkbox,ControlLabel} from 'react-bootstrap';
+import {Form,Col,FormGroup,FormControl,Button,ControlLabel} from 'react-bootstrap';
 import fire from './config/fire';
 
 export default class Login extends Component {
