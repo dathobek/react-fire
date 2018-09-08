@@ -17,8 +17,8 @@ export default class Home extends Component{
             <div>
                 <h1>HEy you are home</h1>
                 <IFrame url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnJgAD6dYZPr4t8wStkJRL3bPL2bc_iDjDq3TmdJKv4WFbwrk6divMB8ieQsdY9KMMMd6m--X8Z2r5/pubhtml?widget=true&amp;headers=false"
-                width="450px"
-                height="450"
+                width="1450px"
+                height="950px"
                 display="initial"
                 position="relative"
                 allowFullScreen/>
