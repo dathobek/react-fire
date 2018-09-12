@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {Form,Col,FormGroup,FormControl,Button,ControlLabel} from 'react-bootstrap';
 import fire from './config/fire';
 
+
 export default class Login extends Component {
 
     constructor(props){
@@ -37,6 +38,7 @@ export default class Login extends Component {
     }
     render(){
         return(
+      
   <Form horizontal style={{position:'fixed', top:'30%',left:'40%', width:'500px'}}>
       <FormGroup controlId="formHorizontalEmail">
       <Col componentClass={ControlLabel} sm={2}>
@@ -66,7 +68,8 @@ export default class Login extends Component {
 
    
    </Form>
-        )
+  
+         )
     }
 
 }
