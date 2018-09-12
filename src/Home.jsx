@@ -16,12 +16,12 @@ export default class Home extends Component{
         return(
             <div>
                 <h1>HEy you are home</h1>
-                <IFrame 
+                {/* <IFrame 
                    width="1450" 
                    height="950" 
                    frameborder="0" 
                    scrolling="no" 
-                   url="https://onedrive.live.com/embed?resid=A6761850755F02BE%21105&authkey=%21AHcO0v0iXOxcijE&em=2&wdAllowInteractivity=False&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></IFrame>
+                   url="https://onedrive.live.com/embed?resid=A6761850755F02BE%21105&authkey=%21AHcO0v0iXOxcijE&em=2&wdAllowInteractivity=False&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></IFrame> */}
                 <button onClick={this.logout}>logout</button>
             </div>
         )
