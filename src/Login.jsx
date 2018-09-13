@@ -4,7 +4,11 @@ import fire from './config/fire';
 import './Login.css';
 
 
+
+
 export default class Login extends Component {
+
+   
 
     constructor(props){
         super(props);
@@ -16,8 +20,11 @@ export default class Login extends Component {
            password:''
 
         }
+
+        
     }
 
+    
     login(e){
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
@@ -51,11 +58,11 @@ export default class Login extends Component {
                 <form method="post" action="" class="login-form">
                     <div className="input-container">
                         <i className="fa fa-envelope"></i>
-                        <input value={this.state.email} onChange={this.handleChange} type="email" class="input" name="email" placeholder="Email"/>
+                        <input value={this.state.email} onChange={this.handleChange} required type="email" class="input" name="email" placeholder="Email"/>
                     </div>
                     <div className="input-container">
                         <i class="fa fa-lock"></i>
-                        <input value={this.state.password} onChange={this.handleChange} type="password"  id="login-password" class="input" name="password" placeholder="Password"/>
+                        <input value={this.state.password} onChange={this.handleChange} required type="password"  id="login-password" class="input" name="password" placeholder="Password"/>
                     </div>
                     
                     <input type="submit" onClick={this.login} class="button"/>
