@@ -119,3 +119,8 @@
     margin-top: 5px;
     text-align: center;
 }
+body{
+   background-image: url("http://images.all-free-download.com/images/graphiclarge/abstract_white_background_266417.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}

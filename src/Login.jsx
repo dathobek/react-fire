@@ -41,13 +41,17 @@ export default class Login extends Component {
         });
     }
 
+    
+
     handleChange(e){
         this.setState({ [e.target.name] : e.target.value})
     }
     render(){
+      
         return(
 
-            <div className="login-form-container" id="login-form">
+           <div className="body">
+               <div className="login-form-container" id="login-form">
             <div className="login-form-content">
                 <div className="login-form-header">
                     <div className="logo">
@@ -74,6 +78,10 @@ export default class Login extends Component {
                 
             </div>
         </div>
+
+
+           </div>
+           
 
 
 
