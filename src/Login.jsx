@@ -27,18 +27,40 @@ export default class Login extends Component {
     
     login(e){
         e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
-        }).catch((error)=>{
-            console.log(error);
-        });
+        const { email, password } = this.state;
+        if (email && password) {
+            if (email.length < 5) {
+                return console.log('email is too short')
+            }
+            if (password.length < 5) {
+                return console.log('password is too short')
+            }
+            fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
+            }).catch((error)=>{
+                console.log(error);
+            });
+        } else {
+            console.log('Both input fields must be complete')
+        }
     }
 
     signup(e){
         e.preventDefault();
+        const { email, password } = this.state;
+        if (email && password) {
+            if (email.length < 5) {
+                return console.log('email is too short')
+            }
+            if (password.length < 5) {
+                return console.log('password is too short')
+            }
         fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
         .catch((error)=>{
             console.log(error);
         });
+        } else {
+            console.log('Both input fields must be complete')
+        }
     }
 
     
