@@ -17,7 +17,8 @@ export default class Login extends Component {
         this.signup = this.signup.bind(this);
         this.state = {
            email:'',
-           password:''
+           password:'',
+           error: ''
 
         }
 
@@ -30,17 +31,23 @@ export default class Login extends Component {
         const { email, password } = this.state;
         if (email && password) {
             if (email.length < 5) {
-                return console.log('email is too short')
+                return this.setState({
+                    error: 'email is too short'
+                })
             }
             if (password.length < 5) {
-                return console.log('password is too short')
+                return this.setState({
+                    error: 'password is too short'
+                })
             }
             fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u) => {
             }).catch((error)=>{
                 console.log(error);
             });
         } else {
-            console.log('Both input fields must be complete')
+            this.setState({
+                    error: 'Both input fields must be complete'
+                })
         }
     }
 
@@ -49,17 +56,23 @@ export default class Login extends Component {
         const { email, password } = this.state;
         if (email && password) {
             if (email.length < 5) {
-                return console.log('email is too short')
+                return this.setState({
+                    error: 'email is too short'
+                })
             }
             if (password.length < 5) {
-                return console.log('password is too short')
+                return this.setState({
+                    error: 'password is too short'
+                })
             }
         fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
-        .catch((error)=>{
+        .catch((error)=> {
             console.log(error);
         });
         } else {
-            console.log('Both input fields must be complete')
+            this.setState({
+                    error: 'Both input fields must be complete'
+                })
         }
     }
 
@@ -97,7 +110,9 @@ export default class Login extends Component {
                 <div className="separator">
                         <span class="separator-text">KPI</span>
                 </div>
-                
+                <div className="error">
+                    {this.state.error}
+                </div>
             </div>
         </div>
 
