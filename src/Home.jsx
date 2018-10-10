@@ -15,7 +15,7 @@ export default class Home extends Component{
     render(){
         return(
             <div>
-                <button onClick={this.logout}>logout</button>
+                <button style={{backgroundColor:'#008CBA',fontSize:'25px'}} onClick={this.logout}>logout</button>
                 <IFrame 
                    width="1450" 
                    height="950" 

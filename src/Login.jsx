@@ -104,7 +104,7 @@ export default class Login extends Component {
                         <input value={this.state.password} onChange={this.handleChange} required type="password"  id="login-password" class="input" name="password" placeholder="Password"/>
                     </div>
                     
-                    <input type="submit" onClick={this.login} class="button"/>
+                    <button type="submit" onClick={this.login} class="button">SUBMIT</button>
                     <a onClick={this.signup} className="register">Register</a>
                 </form>
                 <div className="separator">
